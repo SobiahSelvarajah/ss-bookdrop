@@ -1,18 +1,12 @@
-import { BookOpen, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../../ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "../../ui/sheet";
 import NavbarLogo from "./NavbarLogo";
+import { navLinks } from "./navLinks";
 
 
 export default function Navbar() {
-
-    const navLinks = [
-        { href: "#how-it-works", label: "How It Works" },
-        { href: "#genres", label: "Genres" },
-        { href: "#pricing", label: "Pricing" },
-        { href: "#testimonials", label: "Testimonials" },
-    ];
 
     return (
         <header className="w-full sticky top-0 z-50 border-b border-stone-800  bg-stone-950/90 backdrop-blur-md">
