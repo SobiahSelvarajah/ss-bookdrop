@@ -1,12 +1,11 @@
 import Link from "next/link";
-import { Button } from "../../ui/button";
 import NavbarLogo from "./NavbarLogo";
 import { navLinks } from "./navLinks";
 import NavbarMobile from "./NavbarMobile";
+import NavbarButton from "./NavbarButton";
 
 
 export default function Navbar() {
-
     return (
         <header className="w-full sticky top-0 z-50 border-b border-stone-800  bg-stone-950/90 backdrop-blur-md">
             <nav className="flex justify-between items-center mx-auto max-w-7xl px-8 h-20">
@@ -20,9 +19,7 @@ export default function Navbar() {
                         </li>
                     ))}
                 </ul>
-                <Button className="hidden bg-stone-200 text-stone-900 hover:bg-amber-300 rounded-md px-6 md:flex">
-                    Start Free Week
-                </Button>
+                <NavbarButton variant="desktop" />
                 <NavbarMobile />
             </nav>
         </header>

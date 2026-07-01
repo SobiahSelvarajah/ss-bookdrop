@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { navLinks } from "./navLinks";
+import NavbarButton from "./NavbarButton";
 
 
 export default function NavbarMobile() {
@@ -31,9 +32,7 @@ export default function NavbarMobile() {
                         </SheetClose>
                     ))}                                
                     <SheetClose asChild>
-                        <Button className="mt-6 w-full bg-stone-200 text-stone-900 hover:bg-amber-300">
-                            Start Free Week
-                        </Button>
+                        <NavbarButton variant="mobile" />
                     </SheetClose>
                 </nav>
             </SheetContent>
