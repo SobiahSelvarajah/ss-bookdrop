@@ -1,6 +1,6 @@
 import Link from "next/link";
 import NavbarLogo from "./NavbarLogo";
-import { navLinks } from "./navLinks";
+import { navLinks } from "../../../data/navLinks";
 import NavbarMobile from "./NavbarMobile";
 import NavbarButton from "./NavbarButton";
 

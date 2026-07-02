@@ -2,7 +2,7 @@ import { Menu } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
-import { navLinks } from "./navLinks";
+import { navLinks } from "../../../data/navLinks";
 import NavbarButton from "./NavbarButton";
 
 
