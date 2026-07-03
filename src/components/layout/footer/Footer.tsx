@@ -1,4 +1,6 @@
 import Link from "next/link";
+import FooterLinks from "./FooterLinks";
+import { companyLinks, socialLinks } from "@/data/footerLinks";
 
 
 export default function Footer() {
@@ -14,68 +16,14 @@ export default function Footer() {
                             Curated weekly book recommendations delivered to your inbox.
                         </p>
                     </section>
-                    <section>
-                        <h3 className="mb-4 text-sm uppercase tracking-widest text-stone-500">
-                            Company
-                        </h3>
-                        <ul className="space-y-3 text-stone-400">
-                            <li>
-                                <Link 
-                                    href="/contact"
-                                    className="transition-colors duration-300 hover:text-amber-300"
-                                >
-                                    Contact
-                                </Link>
-                            </li>
-                            <li>
-                                <Link 
-                                    href="/privacy"
-                                    className="transition-colors duration-300 hover:text-amber-300"
-                                >
-                                    Privacy
-                                </Link>
-                            </li>
-                            <li>
-                                <Link 
-                                    href="/terms"
-                                    className="transition-colors duration-300 hover:text-amber-300"
-                                >
-                                    Terms of Service
-                                </Link>
-                            </li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h3 className="mb-4 text-sm uppercase tracking-widest text-stone-500">
-                            Follow Us
-                        </h3>
-                        <ul className="space-y-3 text-stone-400">
-                            <li>
-                                <Link 
-                                    href="#"
-                                    className="transition-colors duration-300 hover:text-amber-300"
-                                >
-                                    Instagram
-                                </Link>
-                            </li>
-                            <li>
-                                <Link 
-                                    href="#"
-                                    className="transition-colors duration-300 hover:text-amber-300"
-                                >
-                                    X
-                                </Link>
-                            </li>
-                            <li>
-                                <Link 
-                                    href="#"
-                                    className="transition-colors duration-300 hover:text-amber-300"
-                                >
-                                    LinkedIn
-                                </Link>
-                            </li>
-                        </ul>
-                    </section>
+                    <FooterLinks 
+                        title="Company"
+                        links={companyLinks}
+                    />
+                    <FooterLinks 
+                        title="Follow Us"
+                        links={socialLinks}
+                    />
                 </div>
                 <address className="mt-16 flex flex-col gap-3 border-t border-stone-800 pt-8 text-sm not-italic text-stone-500 md:flex-row md:items-center md:justify-between">
                     <p>© 2026 BookDrop. All rights reserved.</p>
