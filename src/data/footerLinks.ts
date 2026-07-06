@@ -7,7 +7,7 @@ export const companyLinks = [
 ];
 
 export const socialLinks = [
-    { href: "#", label: "Instagram"},
-    { href: "#", label: "X"},
-    { href: "#", label: "LinkedIn"}, 
+    { href: "www.instagram.com", label: "Instagram"},
+    { href: "www.x.com", label: "X"},
+    { href: "www.linkedin.com", label: "LinkedIn"}, 
 ];
