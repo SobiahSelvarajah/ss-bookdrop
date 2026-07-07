@@ -16,7 +16,7 @@ export default function HeroIllustration() {
 
                     <div className="flex items-center justify-between text-sm text-stone-500">
                         <span className="font-medium text-stone-300">BookDrop</span>
-                        <span>Issue #</span>
+                        <span>Issue #8</span>
                     </div>
 
                     <div className="mt-6 space-y-4">
@@ -32,7 +32,12 @@ export default function HeroIllustration() {
                                 The Seven Deaths of Evelyn Hardcastle
                             </p>
                             <p className="mt-2 text-sm text-stone-400 font-extralight">
-                                A mind-bending mystery set in a looping estate.
+                                This is a mind-bending, Agatha Christie-meets-Groundhog 
+                                Day mystery. The protagonist (Aiden Bishop) is trapped 
+                                in a decaying 1920s manor. To escape, he must solve 
+                                the murder of Evelyn Hardcastle, reliving the same 
+                                day eight times in the bodies of eight 
+                                different guests.
                             </p>
                         </div>
 

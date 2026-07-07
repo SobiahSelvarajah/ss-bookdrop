@@ -7,7 +7,8 @@ export default function HeroContent() {
             <h1 className="font-heading font-semibold text-5xl leading-tight tracking-tight text-stone-100 md:text-6xl md:leading-1.1 lg:text-7xl">
                 Your next favourite book,
                 <br />
-                delivered every week.
+                <span className="text-amber-300">delivered </span> 
+                every week.
             </h1>
             <p className="mt-6 mx-auto max-w-lg text-lg leading-8 text-stone-400 lg:mt-8 lg:mx-0">
                 Pick a genre and get a mystery book recommendation straight to your inbox.
