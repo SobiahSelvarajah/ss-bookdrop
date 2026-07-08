@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Geist, Cormorant_Garamond } from "next/font/google";
 import { cn } from "@/lib/utils";
+import Navbar from "@/components/layout/navbar/Navbar";
+import Footer from "@/components/layout/footer/Footer";
 
 
 const geist = Geist({
@@ -29,7 +31,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(geist.variable, cormorant.variable)}>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
