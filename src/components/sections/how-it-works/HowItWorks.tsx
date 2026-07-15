@@ -1,8 +1,9 @@
+import { howItWorksSteps } from "@/data/howItWorksSteps";
 
 
 export default function HowItWorks() {
     return (
-        <section>
+        <section id="how-it-works" className="text-white">
             <div>
                 <header>
                     <p>
@@ -22,46 +23,13 @@ export default function HowItWorks() {
                 </header>
 
                 <div>
-                    <article>
-                        <span>
-                            01
-                        </span>
-                        <h3>
-                            Choose a genre
-                        </h3>
-                        <p>
-                            Select the genre you love and 
-                            we'll tailor every recommendation
-                            to your reading preferences.
-                        </p>
-                    </article>
-                    <article>
-                        <span>
-                            02
-                        </span>
-                        <h3>
-                            Receive your recommendation
-                        </h3>
-                        <p>
-                            Every Thursday we'll deliver a 
-                            carefully selected mystery book
-                            straight to your inbox.
-                        </p>
-                    </article>
-                    <article>
-                        <span>
-                            03
-                        </span>
-                        <h3>
-                            Start reading
-                        </h3>
-                        <p>
-                            Discover new authors, hidden
-                            gems and unforgettable 
-                            stories one recommendation
-                            at a time.
-                        </p>
-                    </article>
+                    {howItWorksSteps.map((step) => (
+                        <article key={step.number}>
+                            <span>{step.number}</span>
+                            <h3>{step.title}</h3>
+                            <p>{step.description}</p>
+                        </article>
+                    ))}
                 </div>
             </div>
         </section>
