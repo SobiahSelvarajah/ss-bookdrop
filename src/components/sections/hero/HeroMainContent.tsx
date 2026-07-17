@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 
 
-export default function HeroContent() {
+export default function HeroMainContent() {
     return (
         <div className="mx-auto max-w-xl text-center lg:mx-0 lg:text-left">
             <h1 className="font-heading font-semibold text-5xl leading-tight tracking-tight text-stone-100 md:text-6xl md:leading-1.1 lg:text-7xl">
