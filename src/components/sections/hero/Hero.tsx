@@ -1,5 +1,5 @@
 import HeroContent from "./HeroContent";
-import HeroIllustration from "./HeroIllustration";
+import HeroEmail from "./HeroEmail";
 
 
 export default function Hero() {
@@ -7,7 +7,7 @@ export default function Hero() {
         <section className="px-8 py-20 lg:py-20">
             <div className="mx-auto grid max-w-7xl items-center gap-20 lg:grid-cols-2">
                 <HeroContent />
-                <HeroIllustration />              
+                <HeroEmail />              
             </div>
         </section>
     )
