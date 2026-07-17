@@ -1,5 +1,7 @@
 import HowItWorksIntro from "./HowItWorksIntro";
 import { howItWorksSteps } from "@/data/howItWorksSteps";
+import HowItWorksStepCard from "./HowItWorksStepCard";
+
 
 export default function HowItWorks() {
     return (
@@ -9,11 +11,12 @@ export default function HowItWorks() {
 
                 <div>
                     {howItWorksSteps.map((step) => (
-                        <article key={step.number}>
-                            <span>{step.number}</span>
-                            <h3>{step.title}</h3>
-                            <p>{step.description}</p>
-                        </article>
+                        <HowItWorksStepCard
+                            key={step.number}
+                            number={step.number}
+                            title={step.title}
+                            description={step.description}
+                        />
                     ))}
                 </div>
             </div>
