@@ -2,7 +2,7 @@
 
 export default function HeroEmailRecommendation() {
     return (
-        <section className="mt-8 rounded-2xl border border-stone-800 bg-stone-900/50 p-6 sm:p-7">
+        <section className="mt-8 rounded-2xl border border-stone-800 bg-stone-900/60 p-6 shadow-lg sm:p-7">
             <header className="flex">
                 <span className="inline-flex rounded-full bg-amber-400/10 px-3 py-1 text-xs font-medium text-amber-300 ring-1 ring-amber-400/20">
                     Mystery

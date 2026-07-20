@@ -7,15 +7,15 @@ export default function HeroEmailFooter() {
                 Delivered every Thursday by Bookdrop
             </p>
             <nav aria-label="Email footer links" className="mt-4 flex flex-wrap items-center text-xs">
-                <a href="#" className="hover:text-amber-300">
+                <a href="#" className="transition-colors hover:text-amber-300">
                     Manage Preferences
                 </a>
                 <span className="mx-3 text-stone-600">•</span>
-                <a href="#" className="hover:text-amber-300">
+                <a href="#" className="transition-colors hover:text-amber-300">
                     View Online
                 </a>
                 <span className="mx-3 text-stone-600">•</span>
-                <a href="#" className="hover:text-amber-300">
+                <a href="#" className="transition-colors hover:text-amber-300">
                     Unsubscribe
                 </a>
             </nav>
