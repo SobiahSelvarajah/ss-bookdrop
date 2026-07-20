@@ -1,6 +1,7 @@
 import HeroEmailHeader from "./HeroEmailHeader";
 import HeroEmailIntro from "./HeroEmailIntro";
 import HeroEmailRecommendation from "./HeroEmailRecommendation";
+import HeroEmailFooter from "./HeroEmailFooter";
 
 
 export default function HeroEmail() {
@@ -8,7 +9,8 @@ export default function HeroEmail() {
         <div className="relative rounded-3xl border border-stone-700 bg-stone-950/80 p-6 shadow-2xl backdrop-blur-xl">
             <HeroEmailHeader />
             <HeroEmailIntro />    
-            <HeroEmailRecommendation />       
+            <HeroEmailRecommendation />  
+            <HeroEmailFooter />     
         </div>
 
     )
