@@ -12,6 +12,7 @@ export default function Genres() {
                     {genres.map((genre) => (
                         <GenresCard 
                             key={genre.title}
+                            icon={genre.icon}
                             title={genre.title}
                             description={genre.description}
                         />
