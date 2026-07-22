@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 
@@ -24,6 +26,16 @@ export default function HeroLeftContent() {
                     View Sample Recommendation
                 </Button>
             </div>
+
+            <Link
+                href="https://github.com/SobiahSelvarajah/ss-bookdrop"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-10 inline-flex items-center gap-2 text-sm text-stone-500 transition-colors hover:text-amber-300"
+            >
+                View Source Code
+                <ArrowUpRight className="h-4 w-4" />
+            </Link>
         </div>
     )
 }
