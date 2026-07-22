@@ -13,9 +13,7 @@ export default function HowItWorks() {
                     {howItWorksSteps.map((step) => (
                         <HowItWorksStepCard
                             key={step.number}
-                            number={step.number}
-                            title={step.title}
-                            description={step.description}
+                            {...step}
                         />
                     ))}
                 </div>
