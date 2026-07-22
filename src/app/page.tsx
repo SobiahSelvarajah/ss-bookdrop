@@ -3,8 +3,7 @@ import HowItWorks from "@/components/sections/how-it-works/HowItWorks";
 import Genres from "@/components/sections/genres/Genres";
 import Pricing from "@/components/sections/pricing/Pricing";
 import TestimonialsCard from "@/components/sections/testimonials/TestimonialsCard";
-
-
+import { testimonials } from "@/data/testimonials";
 
 export default function Home() {
   return (
@@ -13,7 +12,9 @@ export default function Home() {
       <HowItWorks />
       <Genres />
       <Pricing />
-      <TestimonialsCard />
+      <TestimonialsCard
+        {...testimonials[0]}
+      />
     </>
   );
 }
