@@ -14,8 +14,8 @@ export default function TestimonialsCard({
             <span aria-hidden="true" className="absolute left-8 top-6 font-heading text-7xl text-amber-300/20 md:text-9xl">
                 "
             </span>
-            <blockquote className="relative z-10">
-                <p className="font-heading text-3xl leading-relaxed text-stone-100 md:text-5xl">
+            <blockquote className="relative z-10 flex min-h-64 items-center justify-center">
+                <p className="mx-auto max-w-3xl font-heading text-3xl leading-relaxed text-stone-100 md:text-5xl">
                     {quote}
                 </p>
             </blockquote>
