@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SignupDialog from "@/components/signup/SignupDialog";
 
 
 export default function HeroLeftContent() {
@@ -16,9 +17,11 @@ export default function HeroLeftContent() {
                 Pick a genre and get a mystery book recommendation straight to your inbox.
             </p>
             <div className="mt-14 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
-                <Button className="bg-stone-100 text-stone-900 px-6 py-3 hover:bg-amber-300">
-                    Start Free Week
-                </Button>
+                <SignupDialog>
+                    <Button className="bg-stone-100 text-stone-900 px-6 py-3 hover:bg-amber-300">
+                        Start Free Week
+                    </Button>
+                </SignupDialog>
                 <Button 
                     variant="outline"
                     className="border-stone-700 bg-stone-900/30 text-stone-200 backdrop-blur-sm px-6 py-3 hover:border-amber-300 hover:bg-stone-900/60 hover:text-amber-200 transition-colors"
