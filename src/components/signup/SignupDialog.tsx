@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "../ui/button";
 import {
     Dialog,
     DialogContent,
@@ -9,6 +8,8 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog";
+import SignupForm from "./SignupForm";
+
 
 type SignupDialogProps = {
     children: React.ReactNode;
@@ -33,6 +34,7 @@ export default function SignupDialog({
                         personalised recommendation every Thursday.
                     </DialogDescription>
                 </DialogHeader>
+                <SignupForm />
             </DialogContent>
         </Dialog>
     )
