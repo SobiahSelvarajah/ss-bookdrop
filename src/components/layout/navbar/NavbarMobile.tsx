@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { navLinks } from "../../../data/navLinks";
-import NavbarButton from "./NavbarButton";
+import SignupButton from "@/components/signup/SignupButton";
 
 
 export default function NavbarMobile() {
@@ -32,7 +32,7 @@ export default function NavbarMobile() {
                         </SheetClose>
                     ))}                                
                     <SheetClose asChild>
-                        <NavbarButton variant="mobile" />
+                        <SignupButton variant="mobile" />
                     </SheetClose>
                 </nav>
             </SheetContent>

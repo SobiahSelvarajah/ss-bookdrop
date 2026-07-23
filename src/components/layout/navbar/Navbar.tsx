@@ -2,7 +2,7 @@ import Link from "next/link";
 import NavbarLogo from "./NavbarLogo";
 import { navLinks } from "../../../data/navLinks";
 import NavbarMobile from "./NavbarMobile";
-import NavbarButton from "./NavbarButton";
+import SignupButton from "@/components/signup/SignupButton";
 
 
 export default function Navbar() {
@@ -19,7 +19,7 @@ export default function Navbar() {
                         </li>
                     ))}
                 </ul>
-                <NavbarButton variant="desktop" />
+                <SignupButton variant="desktop" />
                 <NavbarMobile />
             </nav>
         </header>
