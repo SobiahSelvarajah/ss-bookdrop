@@ -132,3 +132,18 @@
 .font-heading {
   font-family: var(--font-cormorant), serif;
 }
+
+@layer utilities {
+  .section-heading {
+    @apply text-sm font-medium uppercase tracking-[0.3em] text-amber-300
+  }
+  .section-subheading {
+    @apply mt-4 font-heading text-4xl font-semibold leading-tight text-stone-100 md:text-5xl
+  }
+  .section-description {
+    @apply mx-auto mt-6 max-w-2xl text-lg leading-8 text-stone-400
+  }
+  .section-wrapper {
+    @apply mx-auto mb-16 max-w-3xl text-center
+  }
+}

@@ -2,16 +2,16 @@
 
 export default function HowItWorksIntro() {
     return (
-        <header className="mx-auto mb-16 max-w-3xl text-center lg:mb-20">
-            <p className="text-sm font-medium uppercase tracking-[0.3em] text-amber-300">
+        <header className="section-wrapper lg:mb-20">
+            <h2 className="section-heading">
                 How It Works
-            </p>
-            <h2 className="mt-4 font-heading text-4xl font-semibold leading-tight tracking-tight text-stone-100 md:text-5xl lg:text-6xl">
+            </h2>
+            <h3 className="section-subheading lg:text-6xl">
                 Discover your next favourite book in 
                 <br />
                 {" "}three simple steps.
-            </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-stone-400 md:text-lg">
+            </h3>
+            <p className="section-description">
                 From choosing your favourite genre 
                 to receiving carefully curated 
                 recommendations, Bookdrop makes 
