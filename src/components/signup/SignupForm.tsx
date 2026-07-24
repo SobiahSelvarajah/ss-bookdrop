@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, type FormEvent } from "react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { genres } from "@/data/genres";
@@ -11,7 +14,13 @@ import {
 } from "@/components/ui/select";
 
 
+
 export default function SignupForm() {
+
+    const [email, setEmail] = useState("");
+    const [genre, setGenre] = useState("");
+
+
     return (
         <form className="mt-10 space-y-12">
             <div className="space-y-3">
@@ -19,6 +28,8 @@ export default function SignupForm() {
                     Email address
                 </label>
                 <Input
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     id="email"
                     type="email"
                     placeholder="you@example.com"
@@ -29,7 +40,10 @@ export default function SignupForm() {
                 <label className="mb-2 block text-sm font-medium text-stone-200">
                     Favourite genre
                 </label>
-                <Select>
+                <Select
+                    value={genre}
+                    onValueChange={setGenre}
+                >
                     <SelectTrigger className="h-12 border-stone-700 bg-stone-900/60 text-stone-100 focus:ring-amber-300/20">
                         <SelectValue placeholder="Choose a genre" />
                     </SelectTrigger>
