@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { VALIDATION_MESSAGES } from "./messages";
 
 
 export const signupSchema = z.object({
@@ -7,15 +8,15 @@ export const signupSchema = z.object({
         .trim()
         .pipe(
             z.email({
-                message: "Please enter a valid email",
+                message: VALIDATION_MESSAGES.email,
             })
         ),
         
-    genres: z
+    genre: z
         .string()
         .trim()
         .min(1, {
-            message: "Please select your favourite genre.",
+            message: VALIDATION_MESSAGES.genre,
         }),
 });
 
