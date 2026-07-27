@@ -1,22 +1,31 @@
 # 📚 BookDrop
 
-BookDrop is a modern book recommendation platform that delivers curated mystery book recommendations straight to your inbox. Built with Next.js, TypeScript and Tailwind CSS, the project focuses on clean architecture, reusable components and responsive UI design.
+BookDrop is a subscription-based book recommendation service designed to help readers discover their next great read without the overwhelm of endless choices.
+Users can choose their favourite genre and receive a personalised book recommendation delivered to their inbox each week.
 
 ## ✨ Features
 
-- Responsive navigation with mobile sheet menu
-- Reusable component architecture
-- Dark themed UI
-- Accessible navigation
-- Fully responsive layout
+- Responsive landing page
+- Genre browsing
+- Pricing plans
+- Reader testimonials
+- Animated testimonial carousel
+- Newsletter signup modal
+- Genre selection
+- Form validation
+- Responsive navigation
+- Smooth, premium dark-themed UI
 
 ## 🛠 Tech Stack
 
-- Next.js 15
-- React 19
+- Next.js
+- React
 - TypeScript
-- Tailwind CSS v4
+- Tailwind CSS
 - shadcn/ui
+- React Hook Form
+- Zod
+- Framer Motion
 - Lucide React
 
 ## 🚀 Getting Started
