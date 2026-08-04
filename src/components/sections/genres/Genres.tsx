@@ -11,7 +11,7 @@ export default function Genres() {
                 <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {genres.map((genre) => (
                         <GenresCard 
-                            key={genre.title}
+                            key={genre.id}
                             {...genre}
                         />
                     ))}

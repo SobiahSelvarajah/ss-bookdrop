@@ -68,8 +68,8 @@ export default function SignupForm() {
                             <SelectContent>
                                 {genres.map((genre) => (
                                     <SelectItem
-                                        key={genre.title}
-                                        value={genre.title.toLowerCase()}
+                                        key={genre.id}
+                                        value={genre.id}
                                     >
                                         {genre.title}
                                     </SelectItem>
