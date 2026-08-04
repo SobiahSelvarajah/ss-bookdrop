@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { VALIDATION_MESSAGES } from "./messages";
+import { VALIDATION_MESSAGES } from "./validationMessages";
 
 
 export const signupSchema = z.object({
