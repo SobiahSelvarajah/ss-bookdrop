@@ -95,7 +95,7 @@ export default function SignupForm() {
                         {form.formState.errors.genre.message}
                     </p>
                 )}
-                
+
             </div>
             <Button type="submit" className="h-12 w-full bg-stone-100 font-medium text-stone-900 transition-all duration-300 hover:bg-amber-300 hover:shadow-lg">
                 Start Free Week
@@ -107,48 +107,6 @@ export default function SignupForm() {
     )
 }
 
-
-
-{/* Scenario 1 
-    - click start free week without entering anything
-
-    Result
-    --message--"Please enter a valid email address."
-
-    must also include:
-    --message--"Please select a genre."
-*/}
-
-//-------------------------------------------------------------
-
-{/* Scenario 2
-    - Enter abc as the email
-
-    Result
-    --message--"Please enter a valid email address."
-
-    must also include:
-    --message--"Please select a genre."    
-*/}
-
-//-------------------------------------------------------------
-
-{/* Scenario 3
-    - Enter valid email but dont select genre
-
-    Result
-    --message--none
-    must include "Please select a genre."
-*/}
-
-//-------------------------------------------------------------
-
-{/* Scenario 4
-    - Enter both valid email and a genre
-
-    Result
-    --message--console logged both pieces of data as an object
-*/}
 
 // also, need to include modal closing once data goes through on click
 // of the submit button
