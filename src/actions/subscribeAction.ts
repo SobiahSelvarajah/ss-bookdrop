@@ -1,5 +1,6 @@
 "use server";
 
+import { prisma } from "@/lib/server/prisma";
 import { subscriptionSchema } from "@/lib/validation/subscriptionSchema";
 
 
@@ -9,12 +10,16 @@ export async function subscribeAction(data: unknown) {
     if (!validated.success) {
         return {
             success: false,
+            message: "Invalid subscription details given.",
         };
     }
 
-    console.log(validated.data);
+    const subscription = await prisma.subscription.create({
+        data: validated.data,
+    });
 
     return {
         success: true,
+        subscriptionId: subscription.id,
     };
 }
