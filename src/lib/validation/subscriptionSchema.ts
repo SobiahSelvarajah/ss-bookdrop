@@ -2,7 +2,7 @@ import { z } from "zod";
 import { VALIDATION_MESSAGES } from "./validationMessages";
 
 
-export const signupSchema = z.object({
+export const subscriptionSchema = z.object({
     email: z
         .string()
         .trim()
@@ -20,4 +20,4 @@ export const signupSchema = z.object({
         }),
 });
 
-export type SignupFormValues = z.infer<typeof signupSchema>;
+export type SubscriptionFormValues = z.infer<typeof subscriptionSchema>;

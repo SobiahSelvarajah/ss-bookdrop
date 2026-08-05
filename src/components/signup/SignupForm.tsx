@@ -7,9 +7,9 @@ import { Button } from "../ui/button";
 import { genres } from "@/data/genres";
 
 import { 
-    SignupFormValues, 
-    signupSchema 
-} from "@/lib/validation/signupSchema";
+    SubscriptionFormValues, 
+    subscriptionSchema,
+} from "@/lib/validation/subscriptionSchema";
 
 import {
     Select,
@@ -23,15 +23,15 @@ import {
 
 export default function SignupForm() {
 
-    const form = useForm<SignupFormValues>({
-        resolver: zodResolver(signupSchema),
+    const form = useForm<SubscriptionFormValues>({
+        resolver: zodResolver(subscriptionSchema),
         defaultValues: {
             email: "",
             genre: "",
         },
     });
 
-    const onSubmit = (data: SignupFormValues) => {
+    const onSubmit = (data: SubscriptionFormValues) => {
         console.log(data);
     };
 
