@@ -1,5 +1,6 @@
 "use client";
 
+import { subscribeAction } from "@/actions/subscribeAction";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "../ui/input";
@@ -31,8 +32,10 @@ export default function SignupForm() {
         },
     });
 
-    const onSubmit = (data: SubscriptionFormValues) => {
-        console.log(data);
+    const onSubmit = async (data: SubscriptionFormValues) => {
+        const result = await subscribeAction(data);
+
+        console.log(result);
     };
 
 

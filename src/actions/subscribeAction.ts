@@ -3,7 +3,7 @@
 import { subscriptionSchema } from "@/lib/validation/subscriptionSchema";
 
 
-export async function subscribe(data: unknown) {
+export async function subscribeAction(data: unknown) {
     const validated = subscriptionSchema.safeParse(data);
 
     if (!validated.success) {
