@@ -8,3 +8,10 @@ generator client {
 datasource db {
   provider = "mysql"
 }
+
+model Subscription {
+  id          Int       @id @default(autoincrement())
+  email       String    @unique
+  genre       String
+  createdAt   DateTime  @default(now())
+}
