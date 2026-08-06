@@ -1,5 +1,6 @@
 "use server";
 
+import { Prisma } from "@/generated/prisma/client";
 import { prisma } from "@/lib/server/prisma";
 import { subscriptionSchema } from "@/lib/validation/subscriptionSchema";
 
@@ -14,12 +15,32 @@ export async function subscribeAction(data: unknown) {
         };
     }
 
-    const subscription = await prisma.subscription.create({
-        data: validated.data,
-    });
+    try {
+        const subscription = await prisma.subscription.create({
+            data: validated.data,
+        });
 
-    return {
-        success: true,
-        subscriptionId: subscription.id,
-    };
+        return {
+            success: true,
+            subscriptionId: subscription.id,
+            message: "Your subscription has been created.",
+        };
+    } catch(error) {
+        if (
+            error instanceof Prisma.PrismaClientKnownRequestError &&
+            error.code === "P2002"
+        ) {
+            return {
+                success: false,
+                messaage: "This email has already been subscribed.",
+            };
+        }
+
+        console.error("Subscription creation failed:", error);
+
+        return {
+            success: false,
+            message: "Something went wrong. Please try again.",
+        };
+    }
 }
