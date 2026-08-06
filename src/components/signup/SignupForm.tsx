@@ -28,7 +28,7 @@ export default function SignupForm() {
         handleSubmit,
         setError,
         clearErrors,
-        formState: { errors },
+        formState: { errors, isSubmitting },
     } = useForm<SubscriptionFormValues>({
         resolver: zodResolver(subscriptionSchema),
         defaultValues: {
@@ -147,9 +147,10 @@ export default function SignupForm() {
 
             <Button
                 type="submit"
+                disabled={isSubmitting}
                 className="h-12 w-full bg-stone-100 font-medium text-stone-900 transition-all duration-300 hover:bg-amber-300 hover:shadow-lg"
             >
-                Start Free Week
+                {isSubmitting ? "Joining BookDrop..." : "Start Free Week"}
             </Button>
 
              <p className="text-center text-xs leading-6 text-stone-500">
