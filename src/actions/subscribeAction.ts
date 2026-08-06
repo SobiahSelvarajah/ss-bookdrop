@@ -32,7 +32,7 @@ export async function subscribeAction(data: unknown) {
         ) {
             return {
                 success: false,
-                messaage: "This email has already been subscribed.",
+                message: "This email has already been subscribed.",
             };
         }
 

@@ -21,10 +21,15 @@ import {
 } from "@/components/ui/select";
 
 
-
 export default function SignupForm() {
-
-    const form = useForm<SubscriptionFormValues>({
+    const {
+        control,
+        register,
+        handleSubmit,
+        setError,
+        clearErrors,
+        formState: { errors },
+    } = useForm<SubscriptionFormValues>({
         resolver: zodResolver(subscriptionSchema),
         defaultValues: {
             email: "",
@@ -35,48 +40,84 @@ export default function SignupForm() {
     const onSubmit = async (data: SubscriptionFormValues) => {
         const result = await subscribeAction(data);
 
-        console.log(result);
+        if (!result.success) {
+            setError(
+                "email",
+                {
+                    type: "server",
+                    message:
+                        result.message ??
+                        "Something went wrong, please try again.",
+                },
+                {
+                    shouldFocus: true,
+                }
+            );
+            return;
+        }
+
+        console.log("Subscription successful:", result);
     };
 
 
     return (
         <form 
-            noValidate 
-            onSubmit={form.handleSubmit(onSubmit)} 
+            noValidate
+            onSubmit={handleSubmit(onSubmit)}
             className="mt-10 space-y-12"
         >
             <div className="space-y-3">
-                <label htmlFor="email" className="mb-2 block text-sm font-medium tracking-wide text-stone-300">
+                <label 
+                    htmlFor="email"
+                    className="mb-2 block text-sm font-medium tracking-wide text-stone-300"
+                >
                     Email address
                 </label>
                 <Input
                     id="email"
                     type="email"
                     placeholder="you@example.com"
-                    {...form.register("email")}
+                    aria-invalid={Boolean(errors.email)}
+                    aria-describedby={errors.email ? "email-error" : undefined}
+                    {...register("email", {
+                        onChange: () => clearErrors("email"),
+                    })}
                     className="h-12 border-stone-700 bg-stone-900/60 text-stone-100 placeholder:text-stone-500 focus-visible:border-amber-300 focus-visible:ring-amber-300/20"
                 />
-
-                {form.formState.errors.email && (
-                    <p className="mt-2 text-sm text-rose-300">
-                        {form.formState.errors.email.message}
+                {errors.email?.message && (
+                    <p
+                        id="email-error"
+                        role="alert"
+                        className="mt-3 text-sm leading-5 text-rose-300"
+                    >
+                        {errors.email.message}
                     </p>
                 )}
-
             </div>
             <div className="space-y-3">
-                <label className="mb-2 block text-sm font-medium text-stone-200">
+                <label 
+                    htmlFor="genre"
+                    className="mb-2 block text-sm font-medium tracking-wide text-stone-300"
+                >
                     Favourite genre
                 </label>
+
                 <Controller
-                    control={form.control}
+                    control={control}
                     name="genre"
                     render={({ field }) => (
                         <Select
                             value={field.value}
                             onValueChange={field.onChange}
                         >
-                            <SelectTrigger className="h-12 border-stone-700 bg-stone-900/60 text-stone-100 focus:ring-amber-300/20">
+                            <SelectTrigger
+                                id="genre"
+                                aria-invalid={Boolean(errors.genre)}
+                                aria-describedby={
+                                    errors.genre ? "genre-error" : undefined
+                                }
+                                className="h-12 border-stone-700 bg-stone-900/60 text-stone-100 focus:ring-amber-300/20"
+                            >
                                 <SelectValue placeholder="Choose a genre" />
                             </SelectTrigger>
                             <SelectContent>
@@ -89,23 +130,31 @@ export default function SignupForm() {
                                     </SelectItem>
                                 ))}
                             </SelectContent>
-                        </Select>
+                        </Select>    
                     )}
                 />
 
-                {form.formState.errors.genre && (
-                    <p className="mt-2 text-sm text-rose-300">
-                        {form.formState.errors.genre.message}
+                {errors.genre?.message && (
+                    <p
+                        id="genre-error"
+                        role="alert"
+                        className="mt-3 text-sm leading-5 text-rose-300"
+                    >
+                        {errors.genre.message}
                     </p>
                 )}
-
             </div>
-            <Button type="submit" className="h-12 w-full bg-stone-100 font-medium text-stone-900 transition-all duration-300 hover:bg-amber-300 hover:shadow-lg">
+
+            <Button
+                type="submit"
+                className="h-12 w-full bg-stone-100 font-medium text-stone-900 transition-all duration-300 hover:bg-amber-300 hover:shadow-lg"
+            >
                 Start Free Week
             </Button>
-            <p className="text-center text-xs leading-6 text-stone-500">
-                No spam, ever. Unsubscribe anytime.
-            </p>
+
+             <p className="text-center text-xs leading-6 text-stone-500">
+                 No spam, ever. Unsubscribe anytime.
+             </p>
         </form>
     )
 }
