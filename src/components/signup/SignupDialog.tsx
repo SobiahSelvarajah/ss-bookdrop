@@ -24,7 +24,7 @@ export default function SignupDialog({
             <DialogTrigger asChild>
                 {children}
             </DialogTrigger>
-            <DialogContent className="border-stone-800 bg-stone-950 p-8 text-stone-100 shadow-2xl sm:max-w-lg">
+            <DialogContent className="border-stone-800 bg-stone-950 p-15 text-stone-100 shadow-2xl sm:max-w-lg">
                 <DialogHeader className="items-center text-center space-y-5">
                     <span className="mx-auto inline-flex rounded-full border border-amber-400/20 bg-amber-400/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-amber-300">
                         Free 7-day Trial

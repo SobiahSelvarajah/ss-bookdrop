@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { subscribeAction } from "@/actions/subscribeAction";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -22,12 +23,16 @@ import {
 
 
 export default function SignupForm() {
+
+    const [isSuccessful, setIsSuccessful] = useState(false);
+
     const {
         control,
         register,
         handleSubmit,
         setError,
         clearErrors,
+        reset,
         formState: { errors, isSubmitting },
     } = useForm<SubscriptionFormValues>({
         resolver: zodResolver(subscriptionSchema),
@@ -56,9 +61,29 @@ export default function SignupForm() {
             return;
         }
 
-        console.log("Subscription successful:", result);
+        reset();
+        setIsSuccessful(true);
     };
 
+    if (isSuccessful) {
+        return (
+            <section
+                aria-live="polite"
+                className="mt-10 flex min-h-70 flex-col items-center justify-center text-center"
+            >
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-amber-400/30 bg-amber-400/10 text-2xl text-amber-300">
+                    ✓
+                </div>
+                <h3 className="mt-6 font-heading text-3xl font-semibold text-stone-100">
+                    Welcome to BookDrop.
+                </h3>
+                <p className="mt-7 max-w-sm text-sm leading-6 text-stone-400">
+                    Your subscription is confirmed. Your first personalised 
+                    recommendation will arrive this Thursday.
+                </p>
+            </section>
+        )
+    }
 
     return (
         <form 
