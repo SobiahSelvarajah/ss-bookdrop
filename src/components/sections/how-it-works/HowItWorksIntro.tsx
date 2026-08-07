@@ -7,9 +7,8 @@ export default function HowItWorksIntro() {
                 How It Works
             </h2>
             <h3 className="section-subheading lg:text-6xl">
-                Discover your next favourite book in 
-                <br />
-                {" "}three simple steps.
+                Discover your next favourite book 
+                in three simple steps.
             </h3>
             <p className="section-description">
                 From choosing your favourite genre 
