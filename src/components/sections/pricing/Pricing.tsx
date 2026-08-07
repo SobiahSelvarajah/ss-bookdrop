@@ -2,6 +2,7 @@ import PricingIntro from "./PricingIntro";
 import PricingCard from "./PricingCard";
 import { pricing } from "@/data/pricing";
 
+
 export default function Pricing() {
     return (
         <section id="pricing" className="px-8 py-24">

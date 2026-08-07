@@ -13,9 +13,7 @@ export default function PricingIntro() {
                 Start with a free week, then choose 
                 the plan that best suits your 
                 reading journey.
-                <br/>
-                No hidden fees, 
-                cancel anytime.
+                No hidden fees, cancel anytime.
             </p>
         </header>
     )
