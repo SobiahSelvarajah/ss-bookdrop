@@ -10,7 +10,7 @@ export default function GenresIntro() {
                 Find stories you'll love.
             </h3>
             <p className="section-description">
-                Choose from a range of genres and receive 
+                Explore a range of genres and receive 
                 carefully curated recommendations tailored 
                 to your reading preferences every week.
             </p>

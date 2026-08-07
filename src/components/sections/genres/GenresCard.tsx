@@ -6,11 +6,13 @@ type GenresCardProps = {
 
 
 export default function GenresCard({
-    icon, title, description,
+    icon, 
+    title, 
+    description,
 }: GenresCardProps) {
     return (
-        <article className="group rounded-3xl border border-stone-800 bg-stone-950/60 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-amber-400/40 hover:bg-stone-900/80">
-            <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-400/10 text-lg font-semibold text-amber-300">
+        <article className="group h-full rounded-3xl border border-stone-800 bg-stone-950/60 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-amber-400/40 hover:bg-stone-900/80 hover:shadow-xl">
+            <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-400/10 text-lg font-semibold text-amber-300 transition-colors duration-300 group-hover:bg-amber-400/15">
                 {icon}
             </div>
             <header>
