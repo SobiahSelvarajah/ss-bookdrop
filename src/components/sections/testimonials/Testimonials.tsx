@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+
 import TestimonialsIntro from "./TestimonialsIntro";
 import TestimonialsCard from "./TestimonialsCard";
 import { testimonials } from "@/data/testimonials";
@@ -14,7 +15,6 @@ export default function Testimonials() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isVisible, setIsVisible] = useState(true);
 
-
     useEffect(() => {
         let timeoutId: ReturnType<typeof setTimeout>;
 
@@ -22,9 +22,9 @@ export default function Testimonials() {
             setIsVisible(false);
 
             timeoutId = setTimeout(() => {
-                setCurrentIndex((prevIndex) => {
-                    return (prevIndex + 1) % testimonials.length
-                });
+                setCurrentIndex(
+                    (prevIndex) => (prevIndex + 1) % testimonials.length
+                );
                 setIsVisible(true);                
             }, FADE_DURATION);
         }, ROTATION_INTERVAL);
@@ -32,11 +32,15 @@ export default function Testimonials() {
         return () => {
             clearInterval(intervalId);
             clearTimeout(timeoutId);
-        }
+        };
     }, []);
 
+
     return (
-        <section id="testimonials" className="px-8 py-24">
+        <section 
+            id="testimonials" 
+            className="scroll-mt-24 px-8 py-24"
+        >
             <div className="mx-auto max-w-7xl">
                 <TestimonialsIntro />
                 <div className={`mt-16 transition-all duration-1200 ease-in-out ${
@@ -50,5 +54,5 @@ export default function Testimonials() {
                 </div>
             </div>
         </section>
-    )
+    );
 }

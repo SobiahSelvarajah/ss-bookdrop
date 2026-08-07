@@ -10,7 +10,7 @@ export default function TestimonialsIntro() {
                 Loved by readers.
             </h3>
             <p className="section-description">
-                Discover why readerlook forward 
+                Discover why readers look forward 
                 to receiving their personalised 
                 BookDrop recommendation every week.
             </p>
