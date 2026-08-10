@@ -11,8 +11,8 @@ export default function HeroEmailIntro() {
             </h3>
             <p className="text-sm leading-7 text-stone-400">
                 Based on your love for mystery novels,
-                we've picked a book that we think 
-                you'll enjoy this week.
+                we&apos;ve picked a book that we think 
+                you&apos;ll enjoy this week.
             </p>
         </section>
     )
