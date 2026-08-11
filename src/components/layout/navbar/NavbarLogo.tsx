@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { BookOpen } from "lucide-react";
 
 
 export default function NavbarLogo() {

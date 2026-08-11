@@ -13,14 +13,20 @@ export default function NavbarMobile() {
                 <Button
                     variant="ghost"
                     size="icon"
-                    className="text-stone-200 hover:bg-amber-300 md:hidden"
+                    className="text-stone-200 hover:bg-amber-300 hover:text-stone-900 md:hidden"
                     aria-label="Open navigation menu"
                 >
                     <Menu className="h-6 w-6"/>
                 </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="flex flex-col border-stone-800 bg-stone-950 text-stone-100 px-8 py-10 opacity-0 translate-x-2 data-[state=open]:opacity-100 data-[state=open]:translate-x-0 data-[state=closed]:opacity-0 data-[state=closed]:translate-x-4 transition-all duration-400 ease-out">
-                <nav className="flex flex-1 flex-col justify-center space-y-15">
+            <SheetContent 
+                side="right" 
+                className="flex flex-col border-stone-800 bg-stone-950 px-8 py-10 text-stone-100 opacity-0 translate-x-4 transition-all duration-400 ease-out data-[state=open]:translate-x-0 data-[state=open]:opacity-100 data-[state=closed]:translate-x-4 data-[state=closed]:opacity-0"
+            >
+                <nav 
+                    aria-label="Mobile navigation"
+                    className="flex flex-1 flex-col justify-center space-y-15"
+                >
                     {navLinks.map((navLink) => (
                         <SheetClose key={navLink.href} asChild>
                             <Link
