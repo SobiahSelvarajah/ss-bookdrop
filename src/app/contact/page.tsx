@@ -1,6 +1,11 @@
+import type { Metadata } from "next";
 import LegalLayout from "@/components/legal/LegalLayout";
 import LegalSection from "@/components/legal/LegalSection";
 
+export const metadata: Metadata = {
+    title: "Contact",
+    description: "Get in touch with the BookDrop team.",
+};
 
 export default function ContactPage() {
     return (

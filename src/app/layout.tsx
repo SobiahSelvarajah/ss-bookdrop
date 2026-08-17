@@ -19,8 +19,12 @@ const cormorant = Cormorant_Garamond({
 
 
 export const metadata: Metadata = {
-  title: "Bookdrop",
-  description: "Curated weekly book recommendations delivered straight to your inbox.",
+  title: {
+    default: "Bookdrop",
+    template: "%s | BookDrop",
+  },
+  description: 
+    "Curated weekly book recommendations delivered straight to your inbox.",
 };
 
 export default function RootLayout({

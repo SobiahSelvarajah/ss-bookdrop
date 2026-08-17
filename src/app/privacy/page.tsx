@@ -1,6 +1,11 @@
+import type { Metadata } from "next";
 import LegalLayout from "@/components/legal/LegalLayout";
 import LegalSection from "@/components/legal/LegalSection";
 
+export const metadata: Metadata = {
+    title: "Privacy Policy",
+    description: "Learn how BookDrop collects, uses and protects your information.",
+};
 
 export default function PrivacyPage() {
     return (

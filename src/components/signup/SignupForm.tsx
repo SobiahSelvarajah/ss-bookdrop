@@ -89,7 +89,7 @@ export default function SignupForm() {
         <form 
             noValidate
             onSubmit={handleSubmit(onSubmit)}
-            className="mt-10 space-y-12"
+            className="mt-10 space-y-5 lg:space-y-12"
         >
             <div className="space-y-3">
                 <label 
@@ -184,7 +184,3 @@ export default function SignupForm() {
         </form>
     )
 }
-
-
-// also, need to include modal closing once data goes through on click
-// of the submit button

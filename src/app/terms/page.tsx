@@ -1,6 +1,11 @@
+import type { Metadata } from "next";
 import LegalLayout from "@/components/legal/LegalLayout";
 import LegalSection from "@/components/legal/LegalSection";
 
+export const metadata: Metadata = {
+    title: "Terms of Service",
+    description: "Read the terms and conditions for using BookDrop,",
+};
 
 export default function TermsPage() {
     return (
