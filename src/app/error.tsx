@@ -1,11 +1,24 @@
 "use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
 import { BookX } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+type ErrorPageProps = {
+    error: Error & { digest?: string };
+    reset: () => void;
+};
 
-export default function ErrorPage() {
+
+export default function ErrorPage({
+    error,
+    reset,
+}: ErrorPageProps) {
+    useEffect(() => {
+        console.error(error);
+    }, [error]);
+
     return (
         <main className="flex min-h-[75vh] items-center justify-center px-8 py-24">
             <section className="mx-auto max-w-xl text-center">
@@ -28,6 +41,7 @@ export default function ErrorPage() {
                 <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                     <Button 
                         type="button"
+                        onClick={reset}
                         className="bg-stone-100 px-6 text-stone-900 hover:bg-amber-300"
                     >
                         Try Again

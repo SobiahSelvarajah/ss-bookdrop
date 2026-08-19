@@ -5,6 +5,7 @@ import Pricing from "@/components/sections/pricing/Pricing";
 import Testimonials from "@/components/sections/testimonials/Testimonials";
 
 export default function Home() {
+  throw new Error("Testing BookDrop error boundary");
   return (
     <>
       <Hero />
