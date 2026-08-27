@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behaviour="smooth">
       <body className={cn(geist.variable, cormorant.variable)}>
         <Navbar />
         {children}
