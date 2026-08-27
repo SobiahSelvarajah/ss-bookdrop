@@ -8,15 +8,15 @@ export default function HeroEmailFooter() {
             </p>
             <nav 
                 aria-label="Email footer links" 
-                className="mt-4 flex flex-wrap items-center text-xs"
+                className="mt-4 flex flex-col items-start gap-2 text-xs sm:flex-row sm:items-center sm:gap-0"
             >
                 <a 
-                    href="#" 
+                    href="#"
                     className="transition-colors hover:text-amber-300"
                 >
                     Manage Preferences
                 </a>
-                <span className="mx-3 text-stone-600">
+                <span className="mx-3 hidden text-stone-600 sm:inline">
                     •
                 </span>
                 <a 
@@ -25,7 +25,7 @@ export default function HeroEmailFooter() {
                 >
                     View Online
                 </a>
-                <span className="mx-3 text-stone-600">
+                <span className="mx-3 hidden text-stone-600 sm:inline">
                     •
                 </span>
                 <a 
