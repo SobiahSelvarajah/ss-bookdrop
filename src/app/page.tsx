@@ -7,12 +7,12 @@ import Testimonials from "@/components/sections/testimonials/Testimonials";
 export default function Home() {
 
   return (
-    <>
+    <main id="top">
       <Hero />
       <HowItWorks />
       <Genres />
       <Pricing />
       <Testimonials />
-    </>
+    </main>
   );
 }

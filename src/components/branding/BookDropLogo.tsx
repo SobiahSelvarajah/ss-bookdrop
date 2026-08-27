@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function BookDropLogo() {
     return (
         <Link 
-            href="/" 
+            href="#top" 
             aria-label="BookDrop home"
             className="flex items-center gap-2 transition-opacity hover:opacity-90"
         >
