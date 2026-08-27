@@ -1,4 +1,4 @@
-
+import Image from "next/image";
 
 export default function HeroEmailRecommendation() {
     return (
@@ -9,13 +9,14 @@ export default function HeroEmailRecommendation() {
                 </span>
             </header>
             <article className="mt-5 flex flex-col gap-5 sm:flex-row">
-                <figure className="flex h-36 w-full items-center justify-center rounded-lg bg-linear-to-br from-amber-200 via-amber-400 to-amber-600 text-center text-xs font-bold text-stone-900 shadow-lg sm:h-28 sm:w-20 sm:shrink-0">
-                    <div>
-                        BOOK
-                    </div>
-                    <figcaption className="sr-only">
-                        Cover of The Seven Deaths of Evelyn Hardcastle
-                    </figcaption>
+                <figure className="relative mx-auto aspect-2/3 w-32 overflow-hidden rounded-lg shadow-lg sm:mx-0 sm:w-20 sm:shrink-0">
+                    <Image
+                        src="/images/books/evelyn-hardcastle.jpg"
+                        alt="Cover of The Seven Deaths of Evelyn Hardcastle"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 639px) 128px, 80px"
+                    />
                 </figure>
                 <section className="flex-1">
                     <header className="space-y-1">
