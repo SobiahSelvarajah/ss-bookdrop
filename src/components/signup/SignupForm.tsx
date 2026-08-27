@@ -69,7 +69,7 @@ export default function SignupForm() {
         return (
             <section
                 aria-live="polite"
-                className="mt-10 flex min-h-70 flex-col items-center justify-center text-center"
+                className="mt-6 flex min-h-56 flex-col items-center justify-center text-center sm:mt-8 sm:min-h-64"
             >
                 <div className="flex h-14 w-14 items-center justify-center rounded-full border border-amber-400/30 bg-amber-400/10 text-2xl text-amber-300">
                     ✓
@@ -89,7 +89,7 @@ export default function SignupForm() {
         <form 
             noValidate
             onSubmit={handleSubmit(onSubmit)}
-            className="mt-10 space-y-5 lg:space-y-12"
+            className="mt-6 space-y-5 sm:mt-8 lg:mt-10 lg:space-y-8"
         >
             <div className="space-y-3">
                 <label 
@@ -163,7 +163,7 @@ export default function SignupForm() {
                     <p
                         id="genre-error"
                         role="alert"
-                        className="mt-3 text-sm leading-5 text-rose-300"
+                        className="mt-1 text-sm leading-5 text-rose-300"
                     >
                         {errors.genre.message}
                     </p>
