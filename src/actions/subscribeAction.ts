@@ -3,6 +3,7 @@
 import { Prisma } from "@/generated/prisma/client";
 import { prisma } from "@/lib/server/prisma";
 import { subscriptionSchema } from "@/lib/validation/subscriptionSchema";
+import { sendConfirmationEmail } from "@/lib/server/sendConfirmationEmail";
 
 
 export async function subscribeAction(data: unknown) {
@@ -20,11 +21,21 @@ export async function subscribeAction(data: unknown) {
             data: validated.data,
         });
 
+        try {
+            await sendConfirmationEmail({
+                email: validated.data.email,
+                genre: validated.data.genre,
+            });
+        } catch (error) {
+            console.error("Confirmation email failed:", error);
+        }
+
         return {
             success: true,
             subscriptionId: subscription.id,
             message: "Your subscription has been created.",
         };
+        
     } catch(error) {
         if (
             error instanceof Prisma.PrismaClientKnownRequestError &&
