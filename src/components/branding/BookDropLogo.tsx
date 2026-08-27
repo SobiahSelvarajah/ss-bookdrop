@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 
-export default function NavbarLogo() {
+export default function BookDropLogo() {
     return (
         <Link 
             href="/" 
