@@ -113,7 +113,7 @@ export default function SignupForm() {
                     <p
                         id="email-error"
                         role="alert"
-                        className="mt-3 text-sm leading-5 text-rose-300"
+                        className="mt-1 text-sm leading-5 text-rose-300"
                     >
                         {errors.email.message}
                     </p>
