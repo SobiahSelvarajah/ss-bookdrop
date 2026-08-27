@@ -8,9 +8,9 @@ import SignupButton from "@/components/signup/SignupButton";
 export default function Navbar() {
     return (
         <header className="w-full sticky top-0 z-50 border-b border-stone-800  bg-stone-950/90 backdrop-blur-md">
-            <nav className="flex justify-between items-center mx-auto max-w-7xl px-8 h-20">
+            <nav className="flex mx-auto h-20 max-w-7xl items-center px-8">
                 <BookDropLogo />
-                <ul className="hidden items-center gap-8 text-sm md:flex">
+                <ul className="ml-12 hidden items-center gap-6 text-sm md:flex lg:gap-8">
                     {navLinks.map((navLink) => (
                         <li key={navLink.href} className="relative text-sm font-medium tracking-wide text-stone-400 transition-colors duration-300 hover:text-amber-200 after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-amber-400 after:transition-all after:duration-300 hover:after:w-full">
                             <Link href={navLink.href}>
@@ -19,7 +19,9 @@ export default function Navbar() {
                         </li>
                     ))}
                 </ul>
-                <SignupButton variant="desktop" />
+                <div className="ml-auto hidden md:block">
+                    <SignupButton variant="desktop" />
+                </div>
                 <NavbarMobile />
             </nav>
         </header>
