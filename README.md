@@ -8,6 +8,12 @@ The project focuses on creating a polished, low-friction subscription experience
 
 
 
+## 🔗 Live Demo
+
+**[View BookDrop Live](https://ss-bookdrop.vercel.app)**
+
+
+
 ## ✨ Features
 
 - Fully responsive landing page across mobile, tablet and desktop
@@ -149,4 +155,4 @@ BookDrop was designed and tested across mobile, tablet and desktop layouts. Comp
 
 ## 📌 Project Status 
 
-BookDrop is a feature-complete and ready for deployment.
+BookDrop is a feature-complete and deployed on Vercel.
