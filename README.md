@@ -143,7 +143,7 @@ BookDrop requires the following environment variables:
 |  `DATABASE_URL`  |  Connection string for the MySQL database |
 | `RESEND_API_KEY` | API key used to send transactional emails |
 
-Warning: Environment variables should NEVER be committed to source control.
+> **Warning:** Environment variables should never be committed to source control.
 
 
 
@@ -156,3 +156,9 @@ BookDrop was designed and tested across mobile, tablet and desktop layouts. Comp
 ## 📌 Project Status 
 
 BookDrop is a feature-complete and deployed on Vercel.
+
+
+
+## 📄 Licence
+
+This project is licenced under the MIT Licence.
