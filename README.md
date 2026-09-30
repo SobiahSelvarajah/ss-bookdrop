@@ -1,6 +1,6 @@
 # 📚 BookDrop
 
-BookDrop is a full-stack book recommendation subscription service designed to make discovering your next read easier and enjoyable.
+BookDrop is a full-stack book recommendation subscription service designed to make discovering your next read easier and more enjoyable.
 
 Users choose their favourite genre and subscribe with their email address to receive personalised weekly book recommendations directly in their inbox.
 
@@ -18,7 +18,7 @@ The project focuses on creating a polished, low-friction subscription experience
 
 - Fully responsive landing page across mobile, tablet and desktop
 - Genre-based book subscription signup
-- Client and server-side form validation
+- Client-side and server-side form validation
 - Persistent subscriber storage using MySQL
 - Duplicate subscription handling
 - Transactional confirmation emails
@@ -59,6 +59,10 @@ The project focuses on creating a polished, low-friction subscription experience
 
 - Resend
 
+### Deployment & Infrastructure
+
+- Vercel
+- Railway
 
 
 ## ⚙️ How It Works
@@ -85,7 +89,7 @@ Email addresses are uniquely constrained in the database. Prisma errors are hand
 
 ### Email failure handling
 
-Confirmation email delivery is handled separately from subscription creation. If the database write succeeds but the email provider fails, the subscription remains successful rather than asking the user to submit again which potentially could trigger a confusing duplicate-subscription flow.
+Confirmation email delivery is handled separately from subscription creation. If the database write succeeds but the email provider fails, the subscription remains successful. This avoids encouraging the user to submit again and potentially triggering a confusing duplicate-subscription flow.
 
 ### Reusable components
 
@@ -95,7 +99,14 @@ Shared UI and branding elements are separated into reusable components to keep t
 
 ## 🚀 Getting Started
 
-Clone the repository and install the dependencies: 
+Clone the repository: 
+
+```bash
+git clone https://github.com/SobiahSelvarajah/ss-bookdrop.git
+cd ss-bookdrop
+```
+
+Install the dependencies: 
 
 ```bash
 npm install
@@ -155,10 +166,10 @@ BookDrop was designed and tested across mobile, tablet and desktop layouts. Comp
 
 ## 📌 Project Status 
 
-BookDrop is a feature-complete and deployed on Vercel.
+BookDrop is feature-complete and deployed on Vercel.
 
 
 
 ## 📄 Licence
 
-This project is licenced under the MIT Licence.
+This project is licensed under the MIT Licence.
