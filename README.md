@@ -164,6 +164,17 @@ BookDrop was designed and tested across mobile, tablet and desktop layouts. Comp
 
 
 
+## 🔮 Future Improvements
+
+BookDrop is feature-complete for its current scope, with several possible extensions for future iterations:
+
+- Automate weekly book recommendation emails based on subscribers' selected genres.
+- Add an unsubscribe flow and allow subscribers to update their genre preferences.
+- Integrate a book API to provide a wider range of recommendations.
+- Add automated test for signup validation and duplicate email handling.
+
+
+
 ## 📌 Project Status 
 
 BookDrop is feature-complete and deployed on Vercel.
